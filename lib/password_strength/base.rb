@@ -60,7 +60,7 @@ module PasswordStrength
       end
     end
 
-    def initialize(username, password, options = {})
+    def initialize(username, password, **options)
       @username = username.to_s
       @password = password.to_s
       @score = 0

@@ -28,8 +28,8 @@ module PasswordStrength
   #
   #   strength = PasswordStrength.test("johndoe", "^Str0ng P4ssw0rd$", :exclude => [" ", "asdf", "123"])
   #
-  def self.test(username, password, options = {})
-    strength = Base.new(username, password, options)
+  def self.test(username, password, **options)
+    strength = Base.new(username, password, **options)
     strength.test
     strength
   end
